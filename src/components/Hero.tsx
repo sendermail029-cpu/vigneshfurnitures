@@ -78,7 +78,7 @@ export default function Hero() {
             className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ transitionDelay: '0.35s' }}
           >
-            <p className="mb-3 hidden max-w-xl font-body text-[0.95rem] leading-relaxed text-white/85 sm:mb-4 sm:block sm:text-lg lg:text-xl">
+            <p className="mb-3 max-w-xl font-body text-[0.95rem] leading-relaxed text-white/85 sm:mb-4 sm:text-lg lg:text-xl">
               Serving families of Hanuman Junction, Bapulapadu & nearby villages
               with quality products and honest service for over
             </p>
