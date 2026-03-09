@@ -8,9 +8,16 @@ export function useInView(threshold = 0.15) {
   useEffect(() => {
     const el = ref.current
     if (!el) return
+    if (typeof IntersectionObserver === 'undefined') {
+      setInView(true)
+      return
+    }
+
+    const isMobile = window.innerWidth < 640
+    const resolvedThreshold = isMobile ? Math.min(threshold, 0.04) : threshold
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) { setInView(true); observer.disconnect() } },
-      { threshold }
+      { threshold: resolvedThreshold, rootMargin: isMobile ? '0px 0px -32px 0px' : '0px 0px -64px 0px' }
     )
     observer.observe(el)
     return () => observer.disconnect()

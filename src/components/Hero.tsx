@@ -22,17 +22,17 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative flex min-h-[100svh] items-center overflow-hidden sm:min-h-screen">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[#091224]" />
         <img
           src="/home1.png"
           alt="Vignesh Furniture showroom"
-          className="absolute inset-0 h-full w-full object-cover object-[72%_center] opacity-40 scale-[1.03] sm:object-[74%_center] lg:object-[78%_center]"
+          className="absolute inset-0 h-full w-full scale-110 object-cover object-[74%_center] opacity-28 sm:scale-[1.03] sm:object-[74%_center] sm:opacity-40 lg:object-[78%_center]"
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_45%,rgba(232,200,74,0.16),transparent_24%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#091224]/95 via-[#0b1730]/76 to-[#0b1730]/18 sm:to-[#0b1730]/22 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#091224]/98 via-[#0b1730]/90 to-[#0b1730]/58 sm:from-[#091224]/95 sm:via-[#0b1730]/76 sm:to-[#0b1730]/22 lg:to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#091224]/84 via-transparent to-[#091224]/34" />
         <div
           className="absolute inset-0 opacity-[0.06]"
@@ -46,14 +46,14 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container pt-24 pb-12 sm:pt-28 sm:pb-16">
-        <div className="max-w-[min(100%,34rem)] rounded-[1.75rem] border border-white/10 bg-navy/28 px-4 py-6 shadow-[0_28px_70px_rgba(9,18,36,0.38)] backdrop-blur-[2px] sm:max-w-[32rem] sm:px-6 sm:py-8 lg:max-w-[36rem] lg:px-8 lg:py-9 xl:max-w-[38rem]">
+      <div className="relative z-10 container pt-20 pb-8 sm:pt-28 sm:pb-16">
+        <div className="max-w-[min(100%,22rem)] rounded-[1.5rem] border border-white/10 bg-navy/28 px-4 py-5 shadow-[0_28px_70px_rgba(9,18,36,0.38)] backdrop-blur-[2px] sm:max-w-[32rem] sm:rounded-[1.75rem] sm:px-6 sm:py-8 lg:max-w-[36rem] lg:px-8 lg:py-9 xl:max-w-[38rem]">
           {/* Top label */}
           <div
             className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{ transitionDelay: '0.1s' }}
           >
-            <span className="inline-flex items-center gap-2 bg-gold/15 border border-gold/30 text-gold text-[11px] font-heading font-bold px-3 py-1.5 rounded-full tracking-[0.2em] uppercase mb-5 sm:text-xs sm:px-4 sm:py-2">
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/15 px-3 py-1.5 text-[10px] font-heading font-bold uppercase tracking-[0.18em] text-gold sm:mb-5 sm:text-xs sm:px-4 sm:py-2">
               <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse" />
               Hanuman Junction's #1 Store
             </span>
@@ -64,7 +64,7 @@ export default function Hero() {
             className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ transitionDelay: '0.2s' }}
           >
-            <h1 className="font-heading font-extrabold text-[2.75rem] sm:text-5xl lg:text-[4.25rem] xl:text-[4.75rem] text-white leading-[0.98] mb-4 sm:mb-5">
+            <h1 className="mb-4 font-heading text-[2.3rem] font-extrabold leading-[0.94] text-white sm:mb-5 sm:text-5xl sm:leading-[0.98] lg:text-[4.25rem] xl:text-[4.75rem]">
               Hanuman Junction's
               <br />
               <span className="text-gold-gradient">Most Trusted</span>
@@ -78,11 +78,11 @@ export default function Hero() {
             className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ transitionDelay: '0.35s' }}
           >
-            <p className="font-body max-w-xl text-white/85 text-base leading-relaxed mb-3 sm:text-lg lg:text-xl sm:mb-4">
+            <p className="mb-3 max-w-xl font-body text-[0.95rem] leading-relaxed text-white/85 sm:mb-4 sm:text-lg lg:text-xl">
               Serving families of Hanuman Junction, Bapulapadu & nearby villages
               with quality products and honest service for over
             </p>
-            <p className="font-display italic text-gold text-xl mb-6 sm:text-2xl lg:text-3xl sm:mb-8">25+ Years.</p>
+            <p className="mb-5 font-display text-xl italic text-gold sm:mb-8 sm:text-2xl lg:text-3xl">25+ Years.</p>
           </div>
 
           {/* Animated product highlight */}
@@ -90,7 +90,7 @@ export default function Hero() {
             className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{ transitionDelay: '0.45s' }}
           >
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8 sm:mb-10">
+            <div className="mb-6 flex flex-wrap items-center gap-2 sm:mb-10 sm:gap-3">
               <span className="text-white/65 font-body text-sm">Shop now:</span>
               <div className="overflow-hidden h-7">
                 <div
@@ -105,7 +105,7 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div
-            className={`flex flex-col sm:flex-row sm:flex-wrap gap-3 mb-10 sm:mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`mb-8 flex flex-col gap-3 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} sm:mb-12 sm:flex-row sm:flex-wrap`}
             style={{ transitionDelay: '0.55s' }}
           >
             <a href="#products" className="btn-gold justify-center text-base px-7 py-4">
@@ -117,7 +117,7 @@ export default function Hero() {
               Call Now
             </a>
             <a href={getGeneralWhatsApp()} target="_blank" rel="noopener noreferrer"
-              className="btn-whatsapp justify-center text-base px-7 py-4">
+              className="btn-whatsapp hidden justify-center px-7 py-4 text-base sm:inline-flex">
               <MessageCircle size={18} />
               WhatsApp Us
             </a>
@@ -125,13 +125,13 @@ export default function Hero() {
 
           {/* Trust badges */}
           <div
-            className={`grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:gap-3 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+            className={`grid grid-cols-3 gap-2 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} sm:flex sm:flex-wrap sm:gap-3`}
             style={{ transitionDelay: '0.65s' }}
           >
             {trustBadges.map(({ icon: Icon, label, sub }) => (
-              <div key={label} className="trust-badge">
-                <Icon size={18} className="text-gold mb-1" />
-                <span className="font-heading font-bold text-base">{label}</span>
+              <div key={label} className="trust-badge px-3 py-2 sm:px-5 sm:py-3">
+                <Icon size={16} className="mb-1 text-gold sm:h-[18px] sm:w-[18px]" />
+                <span className="font-heading text-sm font-bold sm:text-base">{label}</span>
                 <span className="font-body text-white/65 text-xs">{sub}</span>
               </div>
             ))}
@@ -140,7 +140,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30">
+      <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/30 sm:flex">
         <span className="text-xs font-body tracking-widest uppercase">Scroll</span>
         <ChevronDown size={20} className="animate-bounce" />
       </div>

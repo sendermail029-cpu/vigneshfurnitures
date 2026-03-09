@@ -14,7 +14,7 @@ const subcategories: Record<string, string[]> = {
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState('All')
   const [activeSub, setActiveSub] = useState('')
-  const { ref, inView } = useInView()
+  const { ref, inView } = useInView(0.02)
 
   const filtered = products.filter((p) => {
     if (activeCategory !== 'All' && p.category !== activeCategory.toLowerCase()) return false
@@ -23,19 +23,19 @@ export default function Products() {
   })
 
   return (
-    <section id="products" className="section bg-white" ref={ref}>
+    <section id="products" className="section scroll-mt-20 bg-white sm:scroll-mt-24" ref={ref}>
       <div className="container">
         {/* Header */}
-        <div className={`text-center mb-10 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`mb-8 text-center transition-all duration-700 sm:mb-10 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="section-label">
             <span className="w-6 h-px bg-gold" />
             Our Collection
             <span className="w-6 h-px bg-gold" />
           </span>
-          <h2 className="font-heading font-bold text-3xl lg:text-4xl text-navy mb-3 gold-line gold-line-center">
+          <h2 className="gold-line gold-line-center mb-3 font-heading text-[2.1rem] font-bold leading-tight text-navy sm:text-3xl lg:text-4xl">
             Products We Offer
           </h2>
-          <p className="font-body text-navy-700 text-base max-w-lg mx-auto mt-6">
+          <p className="mx-auto mt-5 max-w-lg font-body text-sm text-navy-700 sm:mt-6 sm:text-base">
             Furniture, bed cots, mattresses, wardrobes, TVs, refrigerators, ACs and more. Replace the product images later with your own store photos.
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function Products() {
             <button
               key={cat}
               onClick={() => { setActiveCategory(cat); setActiveSub('') }}
-              className={`px-5 py-2.5 rounded-lg font-heading font-semibold text-sm transition-all duration-300 ${
+              className={`rounded-lg px-5 py-2.5 font-heading text-sm font-semibold transition-all duration-300 ${
                 activeCategory === cat
                   ? 'bg-navy text-white shadow-navy'
                   : 'bg-gray-100 text-navy hover:bg-gray-200'
@@ -85,7 +85,7 @@ export default function Products() {
               style={{ transitionDelay: `${0.05 * i}s`, transitionDuration: '0.6s' }}
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-44 overflow-hidden sm:h-48">
                 <img
                   src={product.image}
                   alt={product.name}
