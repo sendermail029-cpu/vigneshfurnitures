@@ -26,6 +26,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vigneshfurniture.in'),
+  icons: {
+    icon: '/ico.svg',
+    shortcut: '/ico.svg',
+    apple: '/ico.svg',
+  },
   title: {
     default: "Vignesh Furniture's & Electronics | Best Furniture & Electronics Shop in Hanuman Junction",
     template: "%s | Vignesh Furniture's & Electronics",
