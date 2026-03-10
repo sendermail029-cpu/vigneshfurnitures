@@ -1,18 +1,19 @@
 'use client'
+import Image from 'next/image'
 import { useInView } from './hooks/useInView'
 
 const owners = [
   {
     name: 'Boddu Paparao',
     role: 'Founder & Owner',
-    image: '/founder.png',
+    image: '/founder.webp',
     quote: 'Our mission has always been simple — give every family the best quality at a fair price.',
     desc: 'With over 25 years of experience in the furniture and electronics trade, Paparao has built Vignesh Furniture into the most trusted name in Hanuman Junction.',
   },
   {
     name: 'Boddu Mani Babu',
     role: 'Co-Owner & Operations',
-    image: '/cofounder.png',
+    image: '/cofounder.webp',
     quote: 'Every customer who walks in is like family to us. We treat them with honesty and respect.',
     desc: 'Mani Babu manages day-to-day operations and customer relations, ensuring every family leaves the store satisfied.',
   },
@@ -50,11 +51,12 @@ export default function Owners() {
               <div className="flex gap-0">
                 {/* Image */}
                 <div className="relative w-36 shrink-0 overflow-hidden">
-                  <img
+                  <Image
                     src={owner.image}
                     alt={owner.name}
+                    fill
+                    sizes="144px"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    style={{ minHeight: '220px' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/5" />
                 </div>

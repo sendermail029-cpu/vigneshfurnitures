@@ -34,7 +34,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 overflow-hidden rounded-lg bg-white/10 ring-1 ring-white/10">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Vignesh Furniture logo"
                 fill
                 sizes="40px"

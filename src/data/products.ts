@@ -17,7 +17,7 @@ export const products: Product[] = [
     category: 'furniture',
     subcategory: 'Bed Cots',
     description: 'Available in wooden, storage, designer, single, queen and king-size models with multiple finish options.',
-    image: '/bedcoats.png',
+    image: '/bedcoats.webp',
     badge: 'Best Seller',
     featured: true,
   },
@@ -27,7 +27,7 @@ export const products: Product[] = [
     category: 'furniture',
     subcategory: 'Lockers',
     description: 'Available in box storage, drawer storage and regular cot models for bedrooms and family homes.',
-    image: '/beruvaa.png',
+    image: '/beruvaa.webp',
     featured: true,
   },
   {
@@ -46,7 +46,7 @@ export const products: Product[] = [
     category: 'furniture',
     subcategory: 'Mattresses',
     description: 'Available in comfort, orthopaedic, hard, soft and premium mattress varieties for all sleeping needs.',
-    image: '/beds.png',
+    image: '/beds.webp',
     featured: true,
   },
   {
@@ -55,7 +55,7 @@ export const products: Product[] = [
     category: 'furniture',
     subcategory: 'Sofa Sets',
     description: 'Available in 3-seater, 5-seater, L-shape, fabric and leatherette varieties in multiple colours.',
-    image: '/sofas.png',
+    image: '/sofas.webp',
     badge: 'Popular',
     featured: true,
   },
@@ -65,7 +65,7 @@ export const products: Product[] = [
     category: 'furniture',
     subcategory: 'Dining Tables',
     description: 'Available in 4-seater, 6-seater and family dining varieties with different chair and finish options.',
-    image: '/dining.png',
+    image: '/dining.webp',
     featured: true,
   },
   {
@@ -74,7 +74,7 @@ export const products: Product[] = [
     category: 'furniture',
     subcategory: 'Plastic Chairs',
     description: 'Durable plastic chairs for homes, functions, and bulk orders. Easy to clean and stack.',
-    image: '/chairs.png',
+    image: '/chairs.webp',
     badge: 'Best Value',
   },
   {
@@ -83,7 +83,7 @@ export const products: Product[] = [
     category: 'furniture',
     subcategory: 'Wardrobes',
     description: 'Available in steel, mirror, multi-door and family storage varieties with useful shelf arrangements.',
-    image: '/wardrobe.png',
+    image: '/wardrobe.webp',
     featured: true,
   },
   {
@@ -92,7 +92,7 @@ export const products: Product[] = [
     category: 'furniture',
     subcategory: 'Dressing Tables',
     description: 'Stylish dressing table with mirror and storage shelves. Useful for modern bedrooms.',
-    image: '/miror.png',
+    image: '/miror.webp',
   },
   {
     id: 10,
@@ -100,7 +100,7 @@ export const products: Product[] = [
     category: 'furniture',
     subcategory: 'Divan Cots',
     description: 'Simple and affordable divan cot for homes, guest rooms, and rental spaces.',
-    image: '/diwan.png',
+    image: '/diwan.webp',
     badge: 'Budget Pick',
   },
 
@@ -111,7 +111,7 @@ export const products: Product[] = [
     category: 'electronics',
     subcategory: 'TVs',
     description: 'Available in LED, smart, Android and multiple screen-size varieties from leading brands.',
-    image: '/tv.png',
+    image: '/tv.webp',
     badge: 'LG / Samsung',
     featured: true,
   },
@@ -121,7 +121,7 @@ export const products: Product[] = [
     category: 'electronics',
     subcategory: 'Refrigerators',
     description: 'Available in single door, double door, frost-free and family-size refrigerator varieties.',
-    image: '/refrigerator.png',
+    image: '/refrigerator.webp',
     badge: 'Budget Pick',
   },
 
@@ -140,7 +140,7 @@ export const products: Product[] = [
     category: 'electronics',
     subcategory: 'Air Conditioners',
     description: 'Available in split, inverter and seasonal cooling varieties from trusted brands.',
-    image: '/ac.png',
+    image: '/ac.webp',
     badge: 'Season Offer',
     featured: true,
   },
@@ -151,7 +151,7 @@ export const products: Product[] = [
     category: 'electronics',
     subcategory: 'Kitchen Appliances',
     description: 'Available in different motor capacities and jar combinations for daily kitchen use.',
-    image: '/mixi.jfif',
+    image: '/mixi.webp',
     badge: 'Best Value',
   },
   {
@@ -160,7 +160,7 @@ export const products: Product[] = [
     category: 'electronics',
     subcategory: 'Kitchen Appliances',
     description: 'Available in electric cooking and daily-use home appliance varieties for simple meal preparation.',
-    image: '/cooker.png',
+    image: '/cooker.webp',
   },
   {
     id: 19,
@@ -168,7 +168,7 @@ export const products: Product[] = [
     category: 'electronics',
     subcategory: 'Kitchen Appliances',
     description: 'Compact induction stove for fast and efficient cooking with modern safety features.',
-    image: '/induc.png',
+    image: '/induc.webp',
   },
   {
     id: 20,
@@ -184,7 +184,7 @@ export const products: Product[] = [
     category: 'electronics',
     subcategory: 'Fans',
     description: 'Durable ceiling fan with strong air delivery and power-saving performance.',
-    image: '/fan.png',
+    image: '/fan.webp',
   },
   {
     id: 22,
@@ -192,7 +192,7 @@ export const products: Product[] = [
     category: 'electronics',
     subcategory: 'Home Appliances',
     description: 'Lightweight and efficient iron box for smooth daily ironing at home.',
-    image: '/ironbox.png',
+    image: '/ironbox.webp',
   },
 ]
 

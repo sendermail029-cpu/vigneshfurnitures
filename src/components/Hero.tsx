@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { Phone, MessageCircle, ShoppingBag, ChevronDown, Star, Shield, Clock } from 'lucide-react'
 import { getGeneralWhatsApp } from '@/data/products'
 
@@ -26,9 +27,13 @@ export default function Hero() {
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[#091224]" />
-        <img
-          src="/home1.png"
+        <Image
+          src="/home1.webp"
           alt="Vignesh Furniture showroom"
+          fill
+          priority
+          quality={72}
+          sizes="100vw"
           className="absolute inset-0 h-full w-full scale-110 object-cover object-[74%_center] opacity-28 sm:scale-[1.03] sm:object-[74%_center] sm:opacity-40 lg:object-[78%_center]"
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_45%,rgba(232,200,74,0.16),transparent_24%)]" />

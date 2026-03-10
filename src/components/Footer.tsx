@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="mb-5 flex items-center gap-3">
               <div className="relative h-10 w-10 overflow-hidden rounded-lg bg-white/10 ring-1 ring-white/10">
                 <Image
-                  src="/logo.png"
+                  src="/logo.webp"
                   alt="Vignesh Furniture logo"
                   fill
                   sizes="40px"
@@ -164,7 +164,7 @@ export default function Footer() {
             >
               <span className="font-body text-white/75">Designed by</span>
               <Image
-                src="/pj.png"
+                src="/pj.webp"
                 alt="P & J Technologies logo"
                 width={22}
                 height={22}

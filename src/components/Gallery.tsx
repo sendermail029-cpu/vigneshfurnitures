@@ -1,19 +1,20 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react'
 import { useInView } from './hooks/useInView'
 
 const galleryImages = [
-  { src: '/gal1.png', alt: 'Sofa Collection', label: 'Shop' },
+  { src: '/gal1.webp', alt: 'Sofa Collection', label: 'Shop' },
   { src: '/pooja.webp', alt: 'Bedroom Set', label: 'pooja store' },
-  { src: 'cus.webp', alt: 'Smart TVs', label: 'chairs' },
-  { src: '/beruvaa.png', alt: 'Dining Table', label: 'Lockers' },
+  { src: '/cus.webp', alt: 'Smart TVs', label: 'chairs' },
+  { src: '/beruvaa.webp', alt: 'Dining Table', label: 'Lockers' },
   { src: '/cu2.webp', alt: 'Refrigerator', label: 'sofas' },
-  { src: '/whel.jpeg', alt: 'Mattress', label: 'wheel chairs' },
-  { src: '/whel1.jpeg', alt: 'Wardrobe', label: 'wheel chairs' },
-  { src: '/homes.jpg', alt: 'Chairs', label: 'kitchen Appeliance' },
-{ src: '/ele.webp', alt: 'Chairs', label: 'Electronics Appeliance' },
+  { src: '/whel.webp', alt: 'Mattress', label: 'wheel chairs' },
+  { src: '/whel1.webp', alt: 'Wardrobe', label: 'wheel chairs' },
+  { src: '/homes.webp', alt: 'Chairs', label: 'kitchen Appeliance' },
+  { src: '/ele.webp', alt: 'Chairs', label: 'Electronics Appeliance' },
 ]
 
 export default function Gallery() {
@@ -52,12 +53,13 @@ export default function Gallery() {
               }`}
               style={{ transitionDelay: `${0.05 * i}s`, aspectRatio: i === 0 ? '1' : '4/3' }}
             >
-              <img
+              <Image
                 src={img.src}
                 alt={img.alt}
+                fill
+                sizes={i === 0 ? '(max-width: 640px) 100vw, 50vw' : '(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw'}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 style={{ minHeight: i === 0 ? '280px' : '140px' }}
-                loading="lazy"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-navy/0 transition-colors duration-300 group-hover:bg-navy/50">
                 <ZoomIn className="text-white opacity-0 transition-opacity group-hover:opacity-100" size={24} />
@@ -90,12 +92,16 @@ export default function Gallery() {
           >
             <ChevronLeft size={22} />
           </button>
-          <div className="mx-16 h-[80vh] w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
-            <img
-              src={galleryImages[lightbox].src}
-              alt={galleryImages[lightbox].alt}
-              className="h-full w-full object-contain"
-            />
+          <div className="mx-16 w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
+            <div className="relative h-[80vh] w-full">
+              <Image
+                src={galleryImages[lightbox].src}
+                alt={galleryImages[lightbox].alt}
+                fill
+                sizes="100vw"
+                className="h-full w-full object-contain"
+              />
+            </div>
             <div className="mt-3 text-center text-sm font-body text-white/60">
               {galleryImages[lightbox].label} - {lightbox + 1} / {galleryImages.length}
             </div>

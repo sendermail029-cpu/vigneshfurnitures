@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Image from 'next/image'
 import { MessageCircle, Tag } from 'lucide-react'
 import { products, getWhatsAppLink } from '@/data/products'
 import { useInView } from './hooks/useInView'
@@ -86,11 +87,12 @@ export default function Products() {
             >
               {/* Image */}
               <div className="relative h-44 overflow-hidden sm:h-48">
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
                 />
                 {/* Category tag */}
                 <div className="absolute top-3 left-3">

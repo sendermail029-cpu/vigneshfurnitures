@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Instagram, Play, ArrowUpRight } from 'lucide-react'
 import { useInView } from './hooks/useInView'
 
@@ -9,21 +10,21 @@ const reels = [
     subtitle: 'Watch real feedback from customers who visited our store',
     href: 'https://www.instagram.com/reel/DL-GHbhyUeH/?igsh=ZThzZTRwY3NkeGs4',
     tone: 'from-[#fdf2d5] via-[#fff9ec] to-[#ffffff]',
-    thumbnail: '/founder.png',
+    thumbnail: '/founder.webp',
   },
   {
     title: 'Latest Promotions',
     subtitle: 'See current offers, featured products, and store highlights',
     href: 'https://www.instagram.com/reel/DL6L8zhyolN/?igsh=MTN3NGF5aWRveHJ0dQ%3D%3D',
     tone: 'from-[#e5eefc] via-[#f7faff] to-[#ffffff]',
-    thumbnail: '/home1.png',
+    thumbnail: '/home1.webp',
   },
   {
     title: 'More Customer & Store Videos',
     subtitle: 'Explore showroom moments, product clips, and customer reactions',
     href: 'https://www.instagram.com/reel/DL2GlNjSkFl/?igsh=MWg3d3hmdXN3ZGpvOQ%3D%3D',
     tone: 'from-[#f7e7ef] via-[#fff7fb] to-[#ffffff]',
-    thumbnail: '/cofounder.png',
+    thumbnail: '/cofounder.webp',
   },
 ]
 
@@ -70,9 +71,11 @@ export default function Reels() {
 
               <div className="mt-5 rounded-[1.5rem] border border-white/60 bg-[#0f172a] p-3 shadow-inner">
                 <div className="relative aspect-[9/16] overflow-hidden rounded-[1.2rem] bg-slate-900">
-                  <img
+                  <Image
                     src={reel.thumbnail}
                     alt={reel.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/70" />
